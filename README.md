@@ -34,6 +34,7 @@ This setup was designed for and tested on OpenHab2. It might work with modificat
 	* Open "ohpm.items" in your editor of choice. Change "PARTICLEDEVICEID" to the value you copied earlier. Save and close.
 	* Place "ohpm.rules" into your OpenHab Rules folder.
 	* Place "ohpm.sitemap" into your OpenHab Sitemaps folder. This step is optional but allows you to quickly test whether everything is working.
+	* To be safe, restart OpenHab2. On a linux system (including Raspberry Pi), execute `sudo systemctl restart openhab2.service`
 
 * Test it out at: <http://youropenhabserver:8080/basicui/app?sitemap=ohpm>
 
@@ -41,6 +42,8 @@ This setup was designed for and tested on OpenHab2. It might work with modificat
 
 If you have issues, I suggest checking the OpenHab logs first.
 
-Integrate the exposed switches in your rules or by adding them to appropriate groups in the sitemap. If this is beyond your comfort zone, consider some reading at <http://docs.openhab.org> and <https://community.openhab.org>.
+Integrate the exposed switches in your rules or by adding them to appropriate groups in the sitemap. 
+
+There's lots of help out there. For OpenHab issues, consider some reading at <http://docs.openhab.org> and <https://community.openhab.org>. For Particle issues, check out <https://docs.particle.io> and <https://community.particle.io>. I'm on both communities as Dome.
 
 Thanks to John Cocula (<https://github.com/watou>) for his work on the Garadget Binding, and for everyone who has contributed to making OpenHab2 a successful reality.
