@@ -1,0 +1,65 @@
+rule "OHP Alarm On"
+	when
+		Item OHPAlarm changed to ON
+	then
+		sendCommand(OHPM, 1)
+		Thread::sleep(10000)
+		sendCommand(OHPM, 0)
+end
+
+
+rule "OHP Alarm Off"
+	when
+		Item OHPAlarm changed to OFF
+	then
+		sendCommand(OHPM, 2)
+		Thread::sleep(10000)
+		sendCommand(OHPM, 0)
+end
+
+rule "OHP Switch On"
+	when
+		Item OHPSwitch changed to ON
+	then
+		sendCommand(OHPM, 3)
+		Thread::sleep(10000)
+		sendCommand(OHPM, 0)
+end
+
+
+rule "OHP Switch Off"
+	when
+		Item OHPSwitch changed to OFF
+	then
+		sendCommand(OHPM, 4)
+		Thread::sleep(10000)
+		sendCommand(OHPM, 0)
+end
+
+rule "OHP Trouble On"
+	when
+		Item OHPTrouble changed to ON
+	then
+		sendCommand(OHPM, 5)
+		Thread::sleep(10000)
+		sendCommand(OHPM, 0)
+end
+
+
+rule "OHP Trouble Off"
+	when
+		Item OHPTrouble changed to OFF
+	then
+		sendCommand(OHPM, 6)
+		Thread::sleep(10000)
+		sendCommand(OHPM, 0)
+end
+
+rule "OHP Disconnection Reset"
+	when
+		Time cron "0 0/5 * 1/1 * ? *"
+	then
+		sendCommand(OHPM, 10)
+		Thread::sleep(10000)
+		sendCommand(OHPM, 0)
+end		
