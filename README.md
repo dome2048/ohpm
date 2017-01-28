@@ -8,6 +8,10 @@ The setup also has a "timeout" feature, such that if the Internet Button hasn't 
 
 This setup was designed for and tested on OpenHab2. It might work with modification on OpenHab 1; but, since OH2 is out of beta and stable, I'd recommend just getting it updated (after a good backup). There's lots of guidance for this on the OpenHab community forums.
 
+See it in action here:
+<iframe src="https://player.vimeo.com/video/201394242" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/201394242">OpenHab Particle Monitor</a> from <a href="https://vimeo.com/user25661520">dome</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 
 ### **ALERT TYPES** ###
 * Alarm On: Flashing red and blue with an audible tone. Meant for intrusion/burglar alarms.
