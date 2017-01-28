@@ -1,4 +1,3 @@
-# ohpm
 **OpenHab Particle Monitor**
 ============================
 
@@ -16,7 +15,7 @@ See it in action here: <https://vimeo.com/201394242>
 * Trouble On: Spinning yellow light with a periodic "chirp." Ideal for water sensors or HVAC failure.
 * Light On: All LEDs light up white. If you're the nervous type, this can assure you that lighting schedules are running properly.
 * Disconnected: Alternating blue and yellow spinning lights with a periodic chirp indicate the OHPM isn't receiving updates from OpenHab.
-* Note: Alarm and Trouble supersede the Light. If both Alarm and Trouble are activated, you'll see red and blue flashes mixed with a spinning yellow light to indicate both problems.
+Note: Alarm and Trouble supersede the Light. If both Alarm and Trouble are activated, you'll see red and blue flashes mixed with a spinning yellow light to indicate both problems.
 
 ### **INSTALLATION** ###
 
@@ -31,7 +30,7 @@ See it in action here: <https://vimeo.com/201394242>
 * Setting OpenHab up to communicate with the OHPM:
 	* Navigate to your OpenHab web address, click on PaperUI, then Addons, then Bindings. Navigate to the Garadget binding and click Install. (If you prefer, feel free to install the binding through addons.cfg as well.)
 	* Still in the PaperUI, click on Configuration on the left, Bindings, then under the Garadget binding, click on "Configure". Enter your Particle Build username (email) and password. Hit save. You're now done with the PaperUI and can close it.
-	* Access your OpenHab configuration folder via whatever route you prefer (SMB with Eclipse SmartHome editor is my preferred method), you'll need to make several changes here.
+	* Access your OpenHab configuration folder via whatever route you prefer (SMB with Eclipse SmartHome editor is my preferred method); you'll need to make several changes here.
 	* Place "ohpm.items" into your OpenHab Items folder.
 	* Open "ohpm.items" in your editor of choice. Change "PARTICLEDEVICEID" to the value you copied earlier. Save and close.
 	* Place "ohpm.rules" into your OpenHab Rules folder.
