@@ -15,6 +15,8 @@ See it in action here: <https://vimeo.com/201394242>
 * Trouble On: Spinning yellow light with a periodic "chirp." Ideal for water sensors or HVAC failure.
 * Light On: All LEDs light up white. If you're the nervous type, this can assure you that lighting schedules are running properly.
 * Disconnected: Alternating blue and yellow spinning lights with a periodic chirp indicate the OHPM isn't receiving updates from openHAB.
+
+
 Note: Alarm and Trouble supersede the Light. If both Alarm and Trouble are activated, you'll see red and blue flashes mixed with a spinning yellow light to indicate both problems.
 
 ### **INSTALLATION** ###
