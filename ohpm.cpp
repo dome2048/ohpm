@@ -34,6 +34,15 @@ void setup()
 
 
 void loop() {
+    
+    if(b.allButtonsOn()) {
+        alarm = false;
+        trouble = false;
+        light = false;
+        noTone(0);
+        b.allLedsOff();
+    }
+    
     	if (alarm == true) {
 	   tone(sirenPin, 4000);
 	   for (int x=0; x<5; x++) {
@@ -243,7 +252,3 @@ void beep(int freq, int duration, int wait)
   noTone(sirenPin);
   delay(wait);
 }
-
-
-
-
