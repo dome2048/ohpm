@@ -19,6 +19,8 @@ boolean alarm = false;
 boolean light = false;
 boolean trouble = false;
 boolean disconnected = false;
+boolean party = false;
+int resetDelay = 0;
 
 void setup()
 {
@@ -39,8 +41,11 @@ void loop() {
         alarm = false;
         trouble = false;
         light = false;
+        disconnected = false;
+        party = false;
         noTone(0);
         b.allLedsOff();
+        resetDelay = 5;
     }
     
     	if (alarm == true) {
@@ -94,6 +99,18 @@ void loop() {
 	    }
 	}
 
+	if (party == true) {
+        b.rainbow(5);
+	}
+
+    if (resetDelay > 1) {
+        resetDelay = resetDelay - 1;
+    }
+    
+    if (resetDelay == 1) {
+        b.allLedsOff();
+        resetDelay = 0;
+    }
 
 
     disconnectTimer = disconnectTimer + 1;
@@ -146,6 +163,18 @@ int ohpm(String command)
     if (command == "7") {
     yellowWave(2);
     }
+
+    if (command == "8") {
+    party = true;
+    }
+
+    if (command == "9") {
+    party = false;
+    delay(50);
+    b.allLedsOff();
+    resetDelay = 5;
+    }
+
 
 
     if (command == "10") {

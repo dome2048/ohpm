@@ -54,6 +54,24 @@ rule "OHP Trouble Off"
 		Thread::sleep(10000)
 		sendCommand(OHPM, 0)
 end
+rule "OHP Party On"
+	when
+		Item OHPParty changed to ON
+	then
+		sendCommand(OHPM, 8)
+		Thread::sleep(10000)
+		sendCommand(OHPM, 0)
+end
+
+
+rule "OHP Party Off"
+	when
+		Item OHPParty changed to OFF
+	then
+		sendCommand(OHPM, 9)
+		Thread::sleep(10000)
+		sendCommand(OHPM, 0)
+end
 
 rule "OHP Disconnection Reset"
 	when

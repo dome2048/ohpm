@@ -1,7 +1,7 @@
 **openHAB Particle Monitor**
 ============================
 
-Designed to run on Particle's Photon-based Internet Button, the openHAB Particle Monitor provides a link between you and your openHAB-connected house, even when you're away from home. The OHPM exposes three openHAB switches (Alarm, Trouble, and Light) which you can add to groups or automate through rules. As long as the Internet Button is powered, connected to a WiFi network, and configured properly, you'll receive an alert if there's an issue at home. Unlike solutions like MQTT, the OHPM intentionally uses the Particle Cloud to pass updates to your device whenever it has an internet connection.
+Designed to run on Particle's Photon-based Internet Button, the openHAB Particle Monitor provides a link between you and your openHAB-connected house, even when you're away from home. The OHPM exposes four openHAB switches (Alarm, Trouble, Light, and Party) which you can add to groups or automate through rules. As long as the Internet Button is powered, connected to a WiFi network, and configured properly, you'll receive an alert if there's an issue at home. Unlike solutions like MQTT, the OHPM intentionally uses the Particle Cloud to pass updates to your device whenever it has an internet connection.
 
 The setup also has a "timeout" feature, such that if the Internet Button hasn't heard a "status OK" message from openHAB for a few mintues, the system will alert you. If you rely on a smartphone to receive alerts from your house, this provides a way to leave your phone on silent with the assurance you'll be notified of an issue.
 
@@ -15,6 +15,7 @@ See it in action here: <https://vimeo.com/201394242>
 * Trouble On: Spinning yellow light with a periodic "chirp." Ideal for water sensors or HVAC failure.
 * Light On: All LEDs light up white. If you're the nervous type, this can assure you that lighting schedules are running properly.
 * Disconnected: Alternating blue and yellow spinning lights with a periodic chirp indicate the OHPM isn't receiving updates from openHAB.
+* Party Mode: This one is just for fun... when the corresponding Party item in openHAB is switched on, the Internet Button does a rainbow pattern.
 
 
 Note: Alarm and Trouble supersede the Light. If both Alarm and Trouble are activated, you'll see red and blue flashes mixed with a spinning yellow light to indicate both problems.
@@ -40,6 +41,8 @@ Note: Alarm and Trouble supersede the Light. If both Alarm and Trouble are activ
 	* To be safe, restart openHAB 2. On a linux system (including Raspberry Pi), execute `sudo systemctl restart openhab2.service`
 
 * Test it out at: <http://youropenhabserver:8080/basicui/app?sitemap=ohpm>
+
+* To silence any of the alerts, hold down the Internet Button for about a second. Note that this doesn't change anything in openHAB; it only disables the notifications at the device level.
 
 ### **NEXT STEPS** ###
 

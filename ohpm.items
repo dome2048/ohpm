@@ -3,3 +3,4 @@ Number		OHPM				"OHPM"					<analytics>			{ garadget=">[PARTICLEDEVICEID#ohpm]" }
 Switch		OHPAlarm			"OHP Alarm"				
 Switch		OHPSwitch			"OHP Switch"		
 Switch		OHPTrouble			"OHP Trouble"
+Switch		OHPParty			"OHP Party"				["Switchable"]
